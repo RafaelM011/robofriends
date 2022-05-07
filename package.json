@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/RafaelM011/robofriends#readme",
   "dependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "lodash": "^4.17.21"
   }
 }
