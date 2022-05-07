@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/RafaelM011/robofriends/issues"
   },
-  "homepage": "https://github.com/RafaelM011/robofriends#readme"
+  "homepage": "https://github.com/RafaelM011/robofriends#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
 }
