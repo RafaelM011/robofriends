@@ -1,0 +1,10 @@
+.robots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 10px;
+    overflow-y: scroll;
+    border: 0px solid black;
+    height: 700px;
+}
+
