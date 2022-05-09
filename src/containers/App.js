@@ -37,7 +37,7 @@ class App extends Component {
         let name = document.querySelector('.inputName').value;
         let email = document.querySelector('.inputEmail').value;
         console.log(event);
-        if ((email.includes("@") && name !== '') && (email.includes('.com') || email.includes('.net') || email.includes('.es')) && (event.key === "Enter" || event.target.className === 'new Button')){
+        if ((email.includes("@") && name !== '') && (email.includes('.com') || email.includes('.net') || email.includes('.es')) && (event.key === "Enter" || event.target.className === 'newButton')){
             const lastIndex = this.state.robots.length - 1;
             const newId = this.state.robots[lastIndex].id + 1;
             const newRobot = {
