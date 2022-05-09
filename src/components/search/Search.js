@@ -7,7 +7,7 @@ class Search extends Component {
         return(
             <div className='search'>
                 <h1> ROBOFRIENDS </h1>
-                <input type='search' placeholder='Search Robot' onChange={searchChange}/>
+                <input type='search' placeholder='Search Robot' className='inputSearch' onChange={searchChange}/>
             </div>
         )
     }

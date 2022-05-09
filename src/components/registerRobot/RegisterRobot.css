@@ -1,0 +1,47 @@
+.registerRobot {
+    background-color: #9e9;
+    height: 330px;
+    width: 250px;
+    border-radius: 40px;
+    text-align: center;
+    justify-content: center;
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px #ccc;
+    margin: 7px;
+}
+
+.registerRobot:hover {
+    transform: scale(1.04);
+}
+
+.newButton{
+    margin: 40px 0px;
+    border: 0px;
+    background-color: #9e9;
+    height: 150px;
+    width: 250px;
+    font-weight: 900;
+    font-size: 100px;
+}
+
+.inputName {
+    margin-bottom: 20px;
+}
+
+.inputEmail, .inputName {
+    background-color: #9e9;
+    border: 3px solid #9e9;
+    font-weight: bold;
+    text-align: center;
+    outline: 0;
+}
+
+.inputName::placeholder, .inputEmail::placeholder {
+    font-size: 17px;
+    color: black;
+}
+
+.inputName:focus, .inputEmail:focus {
+    font-size: 17px;
+    color: black;
+}

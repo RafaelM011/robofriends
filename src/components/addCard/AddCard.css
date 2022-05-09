@@ -1,5 +1,4 @@
 .addCard {
-    display: flex;
     background-color: #9e9;
     height: 330px;
     width: 250px;
@@ -17,13 +16,13 @@
 
 .addButton {
     position: relative;
-    margin-bottom: 35px;
+    margin-bottom: 0;
     padding: 0;
-    border-radius: 50%;
+    border-radius: 40px;
     border: 0px;
     background-color: #9e9;
-    width: 100px;
-    height: 100px;
+    height: 330px;
+    width: 250px;
     font-weight: 900;
     font-size: 100px;
 

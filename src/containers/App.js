@@ -28,20 +28,40 @@ class App extends Component {
         this.setState({robots: newArray});
     }
     
-    clickAddButton = (event) => {
-        const name = prompt("What's the name of the new robot?");
-        const email = prompt("What's the email of the new robot?");
-        const lastIndex = this.state.robots.length - 1;
-        const newId = this.state.robots[lastIndex].id + 1;
-        const newRobot = {
-            id: newId,
-            name: name,
-            username: name,
-            email: email
-        };
-        const array = this.state.robots;
-        array.push(newRobot);
-        this.setState({robots: array});
+    clickAddButton = () => {
+        document.querySelector('.registerRobot').toggleAttribute('hidden');
+        document.querySelector('.addCard').toggleAttribute('hidden');
+    }
+
+    registerRobot = (event) => {
+        let name = document.querySelector('.inputName').value;
+        let email = document.querySelector('.inputEmail').value;
+        console.log(event);
+        if ((email.includes("@") && name !== '') && (email.includes('.com') || email.includes('.net') || email.includes('.es')) && event.key === "Enter"){
+            const lastIndex = this.state.robots.length - 1;
+            const newId = this.state.robots[lastIndex].id + 1;
+            const newRobot = {
+                id: newId,
+                name: name,
+                username: name,
+                email: email
+            };
+            const array = this.state.robots;
+            array.push(newRobot);
+            this.setState({robots: array});
+            document.querySelector('.inputName').value = '';
+            document.querySelector('.inputEmail').value = '';
+            document.querySelector('.registerRobot').toggleAttribute('hidden');
+            document.querySelector('.addCard').toggleAttribute('hidden');
+        }else{
+            if (event.key === 'Enter' || event.target.className === "newButton"){
+                if (name === ''){
+                    alert('Please fill the name field')
+                }else {
+                    alert(' The email must have an "@" and a ".com/.net/.es" terminal')
+                }
+            }  
+        }
     }
 
     render(){
@@ -51,7 +71,7 @@ class App extends Component {
         return(
             <div className='App'>
                 <Search searchChange={this.searchChange}/>
-                <CardList robots={filteredRobots} onDeleteClick={this.clickDeleteButton} onAddClick={this.clickAddButton}/>
+                <CardList robots={filteredRobots} onDeleteClick={this.clickDeleteButton} onAddClick={this.clickAddButton} registerRobot={this.registerRobot}/>
             </div>
         )
     }
