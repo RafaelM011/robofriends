@@ -36,6 +36,6 @@ input::placeholder {
 input:focus {
     background-color: #89f;
     border-color: black;
-    font-size: 30px;
+    font-size: 15px;
     width: 160px;
 }
