@@ -36,13 +36,16 @@ class App extends Component {
     registerRobot = (event) => {
         let name = document.querySelector('.inputName').value;
         let email = document.querySelector('.inputEmail').value;
-        console.log(event);
+        var newId;
         if ((email.includes("@") && name !== '') && 
             (email.includes('.com') || email.includes('.net') || email.includes('.es')) && 
             (event.key === "Enter" || event.target.className === 'newButton')){
-            
+            if (this.state.robots.length > 0){
                 const lastIndex = this.state.robots.length - 1;
-            const newId = this.state.robots[lastIndex].id + 1;
+                newId = this.state.robots[lastIndex].id + 1;
+            }else {
+                newId = 1;
+            }
             const newRobot = {
                 id: newId,
                 name: name,
